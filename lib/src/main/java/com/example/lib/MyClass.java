@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MyClass {
     public static void main(String[] args) {
 
-        Scanner s1 = new Scanner(System.in);
+/*        Scanner s1 = new Scanner(System.in);
         System.out.println("Enter the first calendar date of your cycle: ");
         int n1 = s1.nextInt();
         //int n1 = 1;
@@ -15,11 +15,41 @@ public class MyClass {
         Cycle myCycle = new Cycle();
         myCycle.cycleStart = n1;
         myCycle.cycleEnd = n2;
-        myCycle.prediction();
+        myCycle.prediction();*/
+
+        Scanner s1 = new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        String input_string = s1.nextLine();
+        count(input_string);
     }
 
+    public static void count(String x) {
+
+        char[] ch = x.toCharArray();
+        int letters = 0;
+        int spaces = 0;
+        int numbers = 0;
+        int others = 0;
+
+        for (int i = 0; i < x.length(); i++) {
+            if (Character.isLetter(ch[i])) {
+                letters++;
+            } else if (Character.isDigit(ch[i])) {
+                numbers++;
+            } else if (Character.isSpaceChar(ch[i])) {
+                spaces++;
+            } else {
+                others++;
+            }
+        }
+        System.out.println("There are "+letters+" letters");
+        System.out.println("There are "+spaces+" spaces");
+        System.out.println("There are "+numbers+" numbers");
+        System.out.println("There are "+others+" characters");
+
+    }
 }
-class Cycle {
+/*class Cycle {
     // states
     int cycleStart;
     int cycleEnd;
@@ -35,4 +65,4 @@ class Cycle {
         System.out.println("next cycle starts: " + nextCycle);
     }
 
-}
+}*/
