@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class MyClass {
     public static void main(String[] args) {
 
+        // period app
 /*        Scanner s1 = new Scanner(System.in);
         System.out.println("Enter the first calendar date of your cycle: ");
         int n1 = s1.nextInt();
@@ -17,13 +18,25 @@ public class MyClass {
         myCycle.cycleEnd = n2;
         myCycle.prediction();*/
 
-        Scanner s1 = new Scanner(System.in);
+        // exercise 4
+/*        Scanner s1 = new Scanner(System.in);
         System.out.println("Enter a string: ");
         String input_string = s1.nextLine();
-        count(input_string);
+        count(input_string);*/
+
+        // exercise 5: reversing a string
+        Scanner s1 = new Scanner(System.in);
+        System.out.println("Enter a string: ");
+        char[] letters = s1.nextLine().toCharArray();
+        System.out.println("The reversed string: ");
+        for (int i = letters.length-1; i >=0; i--) {
+            System.out.println(letters[i]);
+        }
+        System.out.println("\n");
     }
 
-    public static void count(String x) {
+    // exercise 4
+/*    public static void count(String x) {
 
         char[] ch = x.toCharArray();
         int letters = 0;
@@ -47,8 +60,10 @@ public class MyClass {
         System.out.println("There are "+numbers+" numbers");
         System.out.println("There are "+others+" characters");
 
-    }
+    }*/
 }
+
+// period app
 /*class Cycle {
     // states
     int cycleStart;
